@@ -1,6 +1,114 @@
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (direction == 0 && level == 2) {
+        projectile = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+            . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+            . . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
+            . . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
+            . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+            . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, goodGuy, 200, 0)
+    }
+    if (direction == 1 && level == 2) {
+        projectile = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+            . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+            . . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
+            . . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
+            . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+            . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, goodGuy, -200, 0)
+    }
+})
+function nivel_3 () {
+    tiles.setTilemap(tilemap`level4`)
+    level3 = sprites.create(img`
+        . . . . . b b b b b b . . . . . 
+        . . . b b 9 9 9 9 9 9 b b . . . 
+        . . b b 9 9 9 9 9 9 9 9 b b . . 
+        . b b 9 d 9 9 9 9 9 9 9 9 b b . 
+        . b 9 d 9 9 9 9 9 1 1 1 9 9 b . 
+        b 9 d d 9 9 9 9 9 1 1 1 9 9 9 b 
+        b 9 d 9 9 9 9 9 9 1 1 1 9 9 9 b 
+        b 9 3 9 9 9 9 9 9 9 9 9 1 9 9 b 
+        b 5 3 d 9 9 9 9 9 9 9 9 9 9 9 b 
+        b 5 3 3 9 9 9 9 9 9 9 9 9 d 9 b 
+        b 5 d 3 3 9 9 9 9 9 9 9 d d 9 b 
+        . b 5 3 3 3 d 9 9 9 9 d d 5 b . 
+        . b d 5 3 3 3 3 3 3 3 d 5 b b . 
+        . . b d 5 d 3 3 3 3 5 5 b b . . 
+        . . . b b 5 5 5 5 5 5 b b . . . 
+        . . . . . b b b b b b . . . . . 
+        `, SpriteKind.Food)
+    level3.setPosition(224, 208)
+    goodGuy.destroy()
+    level2.destroy()
+    goodGuy = sprites.create(img`
+        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+        8 8 5 5 5 5 5 8 8 5 5 5 5 5 8 8 
+        8 8 5 5 5 5 5 8 8 5 5 5 5 5 8 8 
+        8 8 5 5 f f f 8 8 5 5 f f f 8 8 
+        8 8 5 5 f f f 8 8 5 5 f f f 8 8 
+        8 8 5 5 f f f 8 8 5 5 f f f 8 8 
+        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 5 5 5 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 5 5 5 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 5 5 5 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+        8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+        `, SpriteKind.Player)
+    badGuy.setPosition(8, 8)
+    controller.moveSprite(goodGuy, 100, 100)
+    badGuy = sprites.create(img`
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 5 5 5 5 5 2 2 5 5 5 5 5 2 2 
+        2 2 5 5 5 5 5 2 2 5 5 5 5 5 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 a a 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 a a 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 3 3 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        `, SpriteKind.Enemy)
+    badGuy.setPosition(150, 110)
+    badGuy.follow(goodGuy, 50)
+    scene.cameraFollowSprite(goodGuy)
+    info.stopCountdown()
+}
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava0, function (sprite, location) {
     tiles.setTileAt(location, sprites.dungeon.hazardLava0)
-    game.over(true, effects.melt)
+    game.over(false, effects.melt)
     music.wawawawaa.play()
 })
 function nivel_2 () {
@@ -9,11 +117,62 @@ function nivel_2 () {
     treasure2.destroy()
     treasure3.destroy()
     tiles.setTilemap(tilemap`level2`)
+    level2 = sprites.create(img`
+        .eeee..............eeee.
+        eeddee............eeddee
+        edbbde............edbbde
+        edbbdeeeeeeeeeeeeeedbbde
+        feddeebbbbbbbbbbbbfeddee
+        feeeefbbbbbbbbbbbbfeeeef
+        feeeefeebbbbbbbbeefeeeef
+        eeddeffeeeeeeeeeeffeddee
+        edbbdeffeeeeeeeeffedbbde
+        edbbdebbbbbbbbbbbbedbbde
+        feddeebbbbbbbbbbbbfeddee
+        feeeefeebbbbbbbbeefeeeef
+        feeeeffeeeeeeeeeeffeeeef
+        eeddeeffeeeeeeeeffeeddee
+        edbbdebbbbbbbbbbbbedbbde
+        edbbdebbbbbbbbbbbbedbbde
+        feddeeeebbbbbbbbeefeddee
+        feeeeffeeeeeeeeeeffeeeef
+        feeeefffeeeeeeeefffeeeef
+        eeddeebbbbbbbbbbbbeeddee
+        edbbdebbbbbbbbbbbbedbbde
+        edbbdeeebbbbbbbbeeedbbde
+        feddeefeeeeeeeeeeffeddee
+        feeeefffeeeeeeeefffeeeef
+        feeeefbbbbbbbbbbbbfeeeef
+        eeddeebbbbbbbbbbbbeeddee
+        edbbdeeebbbbbbbbeeedbbde
+        edbbdefeeeeeeeeeefedbbde
+        feddeeffeeeeeeeefffeddee
+        feeeefbbbbbbbbbbbbfeeeef
+        feeeefbbbbbbbbbbbbfeeeef
+        eeddeeeebbbbbbbbeeeeddee
+        edbbdefeeeeeeeeeefedbbde
+        edbbdeffeeeeeeeeffedbbde
+        feddeebbbbbbbbbbbbfeddee
+        feeeefbbbbbbbbbbbbfeeeef
+        fbeeefeebbbbbbbbeefbeeef
+        fbbffffeeeeeeeeeeffbbfff
+        febbbefffffffffffffebbbe
+        feefff666666666666feefff
+        feeeef666666666666feeeef
+        eeeeef............eeeeef
+        .eeff..............eeff.
+        `, SpriteKind.Food)
+    level2.setPosition(1016, 200)
     colorFondo(randint(0, 14))
     goodGuy.ay = 200
     badGuy.setPosition(1024, 8)
     level = 2
+    info.startCountdown(10)
 }
+info.onCountdownEnd(function () {
+    info.startCountdown(10)
+    colorFondo(randint(0, 14))
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     tiles.setTileAt(location, img`
         . b b b b b b b b b b b b b b . 
@@ -34,14 +193,14 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
         . b b . . . . . . . . . . b b . 
         `)
     info.changeScoreBy(1)
-    music.wawawawaa.play()
+    music.baDing.play()
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
     game.over(false, effects.dissolve)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardWater, function (sprite, location) {
     tiles.setTileAt(location, sprites.dungeon.hazardWater)
-    game.over(true, effects.bubbles)
+    game.over(false, effects.bubbles)
     music.wawawawaa.play()
 })
 function colorFondo (codigoColor: number) {
@@ -113,6 +272,33 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
         music.baDing.play()
     }
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    badGuy.destroy()
+    badGuy = sprites.create(img`
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 5 5 5 5 5 2 2 5 5 5 5 5 2 2 
+        2 2 5 5 5 5 5 2 2 5 5 5 5 5 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 a a 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 a a 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 3 3 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        `, SpriteKind.Enemy)
+    badGuy.setPosition(1024, 8)
+    badGuy.follow(goodGuy, 25)
+})
+let level2: Sprite = null
+let level3: Sprite = null
+let projectile: Sprite = null
+let direction = 0
 let level = 0
 let badGuy: Sprite = null
 let goodGuy: Sprite = null
@@ -297,7 +483,7 @@ badGuy.follow(goodGuy, 25)
 controller.moveSprite(goodGuy, 100, 100)
 scene.cameraFollowSprite(goodGuy)
 level = 1
-let direction = 0
+direction = 0
 forever(function () {
     if (info.score() == 4 && goodGuy.overlapsWith(level1)) {
         info.changeScoreBy(10)
@@ -305,8 +491,20 @@ forever(function () {
         music.magicWand.play()
         nivel_2()
     }
-    if (info.score() == 28) {
-        game.over(true, effects.confetti)
+    if (info.score() == 28 && goodGuy.overlapsWith(level2)) {
+        info.changeScoreBy(10)
+        level2.destroy()
         music.magicWand.play()
+        nivel_3()
+    }
+    if (info.score() == 38 && goodGuy.overlapsWith(level3)) {
+        game.over(true, effects.starField)
+        music.powerUp.play()
+    }
+    if (controller.right.isPressed() && level == 2) {
+        direction = 0
+    }
+    if (controller.left.isPressed() && level == 2) {
+        direction = 1
     }
 })
