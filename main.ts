@@ -81,7 +81,7 @@ function nivel_3 () {
         8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
         8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
         `, SpriteKind.Player)
-    badGuy.setPosition(8, 8)
+    goodGuy.setPosition(8, 8)
     controller.moveSprite(goodGuy, 100, 100)
     badGuy = sprites.create(img`
         2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
@@ -102,6 +102,26 @@ function nivel_3 () {
         2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
         `, SpriteKind.Enemy)
     badGuy.setPosition(150, 110)
+    badGuy.follow(goodGuy, 50)
+    badGuy = sprites.create(img`
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 5 5 5 5 5 2 2 5 5 5 5 5 2 2 
+        2 2 5 5 5 5 5 2 2 5 5 5 5 5 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 5 5 f f f 2 2 5 5 f f f 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 a a 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 a a 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 3 3 3 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+        `, SpriteKind.Enemy)
+    badGuy.setPosition(200, 240)
     badGuy.follow(goodGuy, 50)
     scene.cameraFollowSprite(goodGuy)
     info.stopCountdown()
