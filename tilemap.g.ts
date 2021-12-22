@@ -74,12 +74,12 @@ namespace myTiles {
 . 2 2 2 . . . . . . . . 2 2 2 2 
 . . . . . . 2 2 2 . . . 2 2 2 2 
 . . . . . . 2 2 2 2 . . 2 2 2 2 
-. . . . 2 . . . . . . . 2 2 2 2 
-2 2 2 . . . . . . . . . 2 2 2 2 
-2 2 2 2 . . . . 2 2 . . 2 . . 2 
-2 2 2 2 2 2 . . 2 2 . . 2 . . . 
-2 2 2 2 2 2 . . . . . . 2 2 2 . 
-2 2 2 2 2 2 . . . . . . . . . . 
+. 2 2 2 2 . . . . . . . 2 2 2 2 
+. . . . . . . . . . . . 2 2 2 2 
+. 2 2 2 . . . . 2 2 . . 2 . . 2 
+. 2 2 2 2 2 . . 2 2 . . 2 . . . 
+. . 2 2 2 2 . . . . . . 2 2 2 . 
+2 . . . . . . . . . . . . . . . 
 `, [myTiles.transparency16,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenInnerNorthWest,sprites.dungeon.greenInnerNorthEast,sprites.dungeon.greenInnerSouthWest,sprites.dungeon.greenInnerSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterEast1,sprites.dungeon.purpleOuterSouthWest,sprites.dungeon.purpleOuterSouth1,sprites.dungeon.purpleOuterSouth0,sprites.dungeon.purpleOuterSouthEast,sprites.dungeon.purpleOuterWest1,sprites.dungeon.purpleOuterWest0,sprites.dungeon.purpleOuterNorthWest,sprites.dungeon.purpleOuterNorth0,sprites.dungeon.purpleOuterNorth1,sprites.dungeon.purpleOuterNorthEast,sprites.dungeon.purpleOuterEast0,sprites.dungeon.purpleOuterEast1,sprites.dungeon.purpleInnerNorthWest,sprites.dungeon.purpleInnerNorthEast,sprites.dungeon.purpleInnerSouthWest,sprites.dungeon.purpleInnerSouthEast,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouth,sprites.dungeon.stairSouth,sprites.dungeon.stairWest,sprites.dungeon.greenOuterEast0,sprites.dungeon.buttonOrange,sprites.builtin.crowd0,sprites.builtin.crowd1,sprites.builtin.crowd4,sprites.builtin.crowd3,sprites.builtin.brick,sprites.castle.saplingOak,sprites.castle.tilePath7,sprites.castle.tilePath8,sprites.castle.tilePath5,sprites.castle.tilePath4,sprites.castle.tilePath2,sprites.castle.tilePath3,sprites.castle.tilePath6,sprites.castle.tilePath9,sprites.builtin.forestTiles0,sprites.dungeon.floorDark0,sprites.castle.rock2,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.vehicle.roadTurn3,sprites.vehicle.roadTurn4,sprites.dungeon.floorLightMoss,sprites.dungeon.floorLight3,sprites.dungeon.floorDark3,sprites.dungeon.floorDark5,sprites.dungeon.floorLight5,sprites.dungeon.stairLadder], TileScale.Sixteen);
         }
         return null;
